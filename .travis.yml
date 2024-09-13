@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before-install:
+  - docker build -t sagbiradar/docker-prod-react -f Dockerfile.dev .
+
+scripts:
+  - docker run -e CI=true sagbiradar/docker-prod-react npm run test
