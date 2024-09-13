@@ -8,3 +8,4 @@ before-install:
 
 scripts:
   - docker run -e CI=true sagbiradar/docker-prod-react npm run test
+# comment
